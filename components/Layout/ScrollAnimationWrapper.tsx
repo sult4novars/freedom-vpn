@@ -1,12 +1,12 @@
-import { FC } from 'react'
-import {motion} from "framer-motion";
+import type { FC, ReactNode } from 'react'
+import {motion, type MotionProps } from "framer-motion"
 
 type Props = {
-  children: string
-  className: string
+  children: ReactNode;
+  className?: string;
 }
 
-const ScrollAnimationWrapper: FC<Props> = ({children, className, ...props}) => {
+const ScrollAnimationWrapper: FC<Props & MotionProps> = ({children, className, ...props}) =>  {
   return (
     <motion.div
       initial="offscreen"
