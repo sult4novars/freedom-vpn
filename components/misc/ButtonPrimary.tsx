@@ -1,6 +1,12 @@
 import React from "react";
+import type { FC, ReactNode } from 'react'
 
-const ButtonPrimary = ({ children, addClass }) => {
+type Props = {
+  children: ReactNode;
+  addClass?: string;
+}
+
+const ButtonPrimary: React.FC<Props> = ({ children, addClass }) => {
   return (
     <button
       className={
