@@ -2,15 +2,20 @@
 
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 html {
   font-family: "Rubik", sans-serif;
 }
-body {
-  @apply bg-white-500;
+@layer base {
+  body {
+    @apply bg-white-500;
+  }
 }
-p {
-  @apply text-black-500;
+@layer base {
+  p {
+    @apply text-black-500;
+  }
 }
 .animation-hover:after {
   background: none repeat scroll 0 0 transparent;
@@ -61,7 +66,6 @@ li.check:before {
 .slick-dots .slick-active span {
   @apply bg-orange-500 rounded-l-full rounded-r-full w-12;
 }
-
 /* purgecss end ignore */
 @tailwind utilities;
 /* purgecss start ignore */
