@@ -2,10 +2,8 @@ const { nextui } = require("@nextui-org/react");
 
 module.exports = {
   content: [
-    "./pages/*.tsx",
-    "./pages/**/*.tsx",
-    "./components/*.tsx",
-    "./components/**/*.tsx",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -45,11 +43,11 @@ module.exports = {
           500: "#DDDDDD",
         },
       },
-    },
-  },
-  variants: {
-    extend: {
-      boxShadow: ["active", "hover"],
+      variants: {
+        extend: {
+          boxShadow: ["active", "hover"],
+        },
+      },
     },
   },
   darkMode: "class",
